@@ -1,0 +1,16 @@
+@import 'color';
+
+body *{
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  
+  h1 {
+    color:$white ;
+    position: absolute;
+    font-weight: 400;
+  }
+
+  a {
+    color: $white;
+  }
+}

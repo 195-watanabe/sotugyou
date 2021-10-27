@@ -1,0 +1,365 @@
+@import 'color';
+@import 'font';
+
+.top {
+  background-image:url(../img/home-top.jpg) ;
+  z-index: -1;
+
+  h1 {
+    font-size: 88px;
+    top: 50%;
+    left: 50%;
+    width: 1080px;
+    transform: translate(-540px, -44px);
+    position: fixed;
+  }
+}
+
+// コンセプト
+#concept {
+  width: 100%;
+  height: 1080px;
+  background-image: url(../img/home-concept.jpg);
+  background-position: center;
+  background-size: cover;
+
+  .sub_ttl {
+    padding: 120px 140px 140px;
+
+    .tri {
+      height: 60px;
+    }
+  
+    h2 {
+      display: inline-block;
+      color: $white;
+      font-size: 64px;
+      width: auto;
+    }
+  }
+
+  p {
+    font-size: 50px;
+    color: $white;
+    width: 1105px;
+    margin: 0 auto;
+    line-height: 94px;
+    animation-delay: .3s;
+
+    strong {
+      font-size: 64px;
+      font-weight: 600;
+      @include ttl;
+    }
+
+    span {
+      color: $pink;
+    }
+  }
+
+  .xr_wrap {
+    width: 1140px;
+    margin: 140px auto 0;
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      .xr_ttl {
+        width: 330px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 54px;
+        position: absolute;
+        top: 50%;
+      }
+    }
+
+    li:nth-child(1) {
+      background-image: url(../img/vr.jpg);
+    }
+
+    li:nth-child(2) {
+      background-image: url(../img/ar.jpg);
+      animation-delay: .2s;
+    }
+    
+    li:nth-child(3) {
+      background-image: url(../img/mr.jpg);
+      animation-delay: .4s;
+    }
+  }
+}
+
+// サービス
+.service {
+  
+  &_wrap {
+    width: 100%;
+    height: 1080px;
+    display: flex;
+
+    .service_bg {
+      width: 60%;
+      height: 100%;
+      background-image: url(../img/home-service.jpg);
+      background-size: cover;
+      background-position-x: 35%;
+    }
+
+    .service_content {
+      width: 40%;
+      min-width: 810px;
+      height: 100%;
+      background-color: black;
+      color: $white;
+      // position: relative;
+    }
+
+    .sub_ttl {
+      margin: 44px 60px 0 100px; 
+      animation-delay: .3s;
+
+      .tri {
+        width: 60px;
+        height: 60px;
+      }
+
+      h2 {
+        font-size: 64px;
+      }
+    }
+  }
+
+  .service_item {
+    box-sizing: border-box;
+    width: 550px;
+    margin: 80px auto;
+    border: 1px solid $white;
+    padding: 40px 86px;
+    animation-delay: .3s;
+
+    h3 {
+      font-size: 28px;
+      line-height: 44px;
+      margin-bottom: 44px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 40px;
+    }
+  }
+
+  .arrow_wrap {
+    width: 550px;
+    margin: 86px auto 0;
+    
+    p {
+      display: inline-block;
+      width: auto;;
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+      margin-right: 16px;
+      transition: .3s;
+    }
+    
+    .arrow {
+      width: 70px;
+      height: 14px;
+      display: inline-block;
+      background-image: url(../img/arrow.svg);
+      margin-top: 8px;
+      float: right;
+      transition: .3s;
+    }
+  }
+
+  .arrow_wrap:hover {
+
+    p {
+      color: $lBlue;
+      font-size: 34px;
+      transform: translate(2px, -4px);
+    }
+
+    .arrow {
+      transform: translateX( 4px);
+    }
+  }
+}
+
+// ニュース
+.news {
+  width: 100%;
+  background-color: white;
+  padding-bottom: 300px;
+
+
+  .sub_ttl {
+      padding: 120px 120px 0px 8vw; 
+      animation-delay: .3s;
+      
+      .tri {
+        width: 60px;
+        height: 60px;
+      }
+      
+      h2 {
+        color: $dGray;
+        font-size: 64px;
+      }
+    }
+
+  &_wrap {
+
+    .news_block {
+      margin-top: 96px;
+      margin-bottom: 130px;
+      padding: 0 8vw;
+      
+      .news_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+
+        .news_img {
+          background-image: url(../img/home_news.jpg);
+          background-size: cover;
+          width: 100%;
+          height: 18vw;          
+        }
+
+        .news_tag {
+          margin-top: 1vw;
+          font-size: 18px;
+          color: $dGray;
+        }
+        
+        .news_date {
+          margin-top: 1vw;
+          font-size: 18px;
+          color: $dGray;
+        }
+        
+        .news_ttl {
+          margin-top: 1.2vw;
+          font-size: 24px;
+          line-height: 36px;
+          color: $dGray;
+        }
+      }
+    }
+
+    
+    .news_btn {
+      width: 280px;
+      height: 80px;
+      margin: 0 auto;
+      @include ttl;
+      font-size: 20px;
+      box-sizing: border-box;
+      padding: 29px 60px;
+      color: $gray;
+      border: solid 1px $gray;
+      transition: .3s;
+    }
+
+    .news_btn:hover {
+      color: $white;
+      border-color: black;
+      background-color: black;
+    }
+  }
+}
+
+// フッター
+footer {
+  width: 100%;
+  height: 800px;//後で消す
+  background-color: $lGray;
+  display: block;
+
+  .footer_wrap {
+    margin: 0 4vw;
+    position: relative;
+    
+    .footer_btn {
+      width: 840px;
+      height: 270px;
+      background-color: black;
+      position: absolute;
+      right: 0;
+      top: -177px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 42px;
+
+      &_msg {
+        display: inline-block;
+        @include ttl;
+        font-size: 36px;
+        line-height: 78px;
+        color: $white;
+        
+        span {
+          @include ttl;
+          font-size: 70px;
+          line-height: 112px;
+          font-weight: 500;
+        }
+      }
+      
+      &_arrow {
+        @include ttl;
+        display: inline-block;
+        font-size: 78px;
+        font-weight: 500;
+        padding-top: 78px;
+      }
+    }
+  
+    .footer_logo {
+      width: 380px;
+      height: 92px;
+      background-image: url(../img/footer-logo.svg);
+    }
+  }
+
+}
+@media screen and (max-width: 1160px)  {
+
+  .header {
+
+    .header_inner {
+
+      .header_nav {
+
+        ul {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .top {
+
+    h1 {
+      font-size: 56px;
+      width: 680px;
+      text-align: center;
+     transform: translate(-340px, -28px);
+
+    }
+  }
+  
+}
