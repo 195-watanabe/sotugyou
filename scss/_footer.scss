@@ -1,0 +1,149 @@
+@import 'color';
+@import 'font';
+
+footer {
+  width: 100%;
+  background-color: $lGray;
+  display: block;
+
+  .footer_wrap {
+    padding-top: 142px;
+    margin: 0 4vw;
+    position: relative;
+    
+    .footer_btn {
+      width: 840px;
+      height: 270px;
+      background-color: black;
+      position: absolute;
+      right: 0;
+      top: -177px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 42px;
+      transition: .3s;
+
+      &_msg {
+        display: inline-block;
+        @include ttl;
+        font-size: 36px;
+        line-height: 78px;
+        color: $white;
+        
+        span {
+          @include ttl;
+          font-size: 70px;
+          line-height: 112px;
+          font-weight: 500;
+        }
+      }
+      
+      &_arrow {
+        @include ttl;
+        display: inline-block;
+        font-size: 78px;
+        font-weight: 500;
+        margin-top: 78px;
+        transition: .3s;
+
+      }
+    }
+    
+    a:hover .footer_btn_arrow {
+      font-size: 84px;
+      transform: translate(22px, -2px);
+    }  
+
+    a:hover .footer_btn {
+      background-color: $gray;
+    }
+
+    .footer_logo {
+      width: 380px;
+      height: 92px;
+      background-image: url(../img/footer-logo.svg);
+    }
+
+    .footer_nav {
+      margin-top: 94px;
+
+      ul {
+        display: inline-block;
+        
+        li {
+          display: inline-block;
+          margin-right: 3vw;
+          
+          a {
+            transition: .4;
+            @include ttl;
+            color: $dGray;
+            font-size: 28px;
+          }
+
+          a:hover {
+            color: $lBlue;
+            opacity: .7;
+          }
+        }
+
+        li:nth-child(1) {
+          margin-left: 24px;
+        }
+      }
+    }
+
+    .footer_bottom {
+      margin-top: 100px;
+      padding-bottom: 54px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 18px;
+
+      .copy {
+        display: inline-block;
+        color: $dGray;
+        padding-left: 24px;
+
+      }
+      
+      .sns {
+        display: inline-block;
+        
+        ul {
+          
+          li {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin-right: 2vw;
+            transition: .2s;
+          }
+
+          li:hover {
+            transform: translateY(-6px);
+          }
+
+          .twitter {
+            width: 56px;
+            height: 46px;
+            background-image: url(../img/twitter.svg);
+            background-size: cover;
+          }
+          
+          .inst {
+            background-image: url(../img/inst.png);
+            background-size: cover;
+          }
+          
+          .fb {
+            background-image: url(../img/fb.png);
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}
