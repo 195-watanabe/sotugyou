@@ -147,3 +147,113 @@ footer {
     }
   }
 }
+
+// レスポンシブ
+// タブレット
+@media screen and (max-width: 1160px) {
+  footer {
+
+    .footer_wrap {
+      padding-top: 168px;
+
+      .footer_btn {
+        width: 720px;
+        height: 240px;
+        top: -158px;
+        right: 50%;
+        transform: translateX(360px);
+
+        .footer_btn_msg {
+          font-size: 32px;
+          line-height: 1.5em;
+
+          span {
+            font-size: 52px;
+            line-height: 1.5em;
+          }
+        }
+
+        .footer_btn_arrow {
+          margin-top: 44px;
+        }
+      }
+    }
+  }
+}
+
+// スマホ
+@media screen and (max-width: 425px) {
+  footer {
+
+    .footer_wrap {
+      padding-top: 90px;
+
+      .footer_btn {
+        width: 280px;
+        height: 80px;
+        top: -48px;
+        transform: translateX(140px);
+
+        .footer_btn_msg {
+          font-size: 12px;
+          line-height: 1.5em;
+
+          span {
+            font-size: 20px;
+            line-height: 1.5em;
+          }
+        }
+
+        .footer_btn_arrow {
+          font-size: 24px;
+          margin-top: 14px;
+        }
+      }
+
+      .footer_logo {
+        width: 120px;
+        height: 28px;
+        background-size: cover;
+      }
+
+      .footer_nav {
+        margin-top: 40px;
+
+        ul {
+
+          li {
+
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .footer_bottom {
+        margin-top: 26px;
+        padding-bottom: 26px;
+
+        .copy {
+          font-size: 9px;
+        }
+
+        .sns {
+
+          ul {
+
+            li {
+              width: 20px;
+              height: 20px;
+            }
+
+            .twitter {
+              width: 22px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

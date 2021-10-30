@@ -1,4 +1,5 @@
 @import 'color';
+@import 'font';
 
 .header {
   width: 100vw;
@@ -18,7 +19,7 @@
     }
   
     .header_nav {
-      // vertical-align: center;
+
       ul {
         display: inline-block;
         
@@ -79,7 +80,139 @@
   visibility: hidden;
   transition: opacity .5s, visibility .5s;
 
-}
+  .nav_wrap {
+    display: flex;
+
+    .nav_bg {
+      width: 50%;
+      height: 100vh;
+      background-image: url(../img/hamburger.jpg);
+      background-size: cover;
+      background-position-x: 32%;
+      position: relative;
+
+      p {
+        position: absolute;
+        width: 384px;
+        transform: translate(-192px, -100px);
+        top: 50%;
+        left: 50%;
+        font-size: 64px;
+        color: $gray;
+        text-align: center;
+        line-height: 1.3em;
+      }
+    }
+
+    .nav_menu {
+      width: 50%;
+      height: 100vh;
+
+      &_ul {
+        width: 60%;
+        height: 75%;
+        margin: 0 auto;
+        border-left: 1px solid $white;
+        border-bottom: 1px solid $white;
+        padding: 18% 0 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          margin-top: 8%;
+          font-size: 38px;
+          width: 170px;
+          transition: .2s;
+
+          a {
+            transition: .2s;
+          }
+        }
+        
+        li:nth-child(1) {
+          margin-top: 0;
+        }
+        
+        li:hover {
+          transform: translateX(8px);
+
+          a{
+            color: $lBlue;
+          }
+        }
+      }
+
+      .nav_sns {
+        width: 60%;
+        height: 20%;
+        margin: 0 auto;
+        position: relative;
+        border-right: 1px solid $white;
+      }
+
+      .nav_sns::before {
+        content: '';
+        width: 36px;
+        height: 1px;
+        background-color: $white;
+        position: absolute ;
+        right: 0;
+        bottom: 0;
+        transform: translate(6px, -12px) rotate(45deg);
+      }
+
+      .nav_sns::after {
+        content: '';
+        width: 36px;
+        height: 1px;
+        background-color: $white;
+        position: absolute ;
+        right: 0;
+        bottom: 0;
+        transform: translate(30.5px, -12px) rotate(135deg);
+      }
+
+      .nav_sns_ul {
+        width: 300px;
+        margin: 0px auto;
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+          
+          li {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            margin: 0 24px;
+            transition: .2s;
+          }
+
+          li:hover {
+            transform: translateY(-6px);
+          }
+
+          .twitter {
+            width: 56px;
+            height: 46px;
+            background-image: url(../img/twitter-w.svg);
+            background-size: cover;
+          }
+          
+          .inst {
+            background-image: url(../img/inst-w.png);
+            background-size: cover;
+          }
+          
+          .fb {
+            background-image: url(../img/fb-w.png);
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
 
 // クリック後
 .nav_toggle.show {
@@ -95,4 +228,129 @@
 .nav.show {
   opacity: 1;
   visibility: visible;
+}
+
+// レスポンシブ
+// タブレット
+@media screen and (max-width: 1160px)  {
+
+  .header {
+
+    .header_inner {
+
+      .header_nav {
+
+        ul {
+          opacity: 0;
+          visibility: hidden;
+          width: calc(96vw - 420px);
+
+          li {
+            font-size: 0px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .nav {
+
+    .nav_wrap {
+
+      .nav_bg {
+        width: 0;
+
+        p {
+          font-size: 0;
+        }
+      }
+      .nav_menu {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .header {
+
+    .header_inner {
+
+      .header_logo {
+        width: 204px;
+        height: 42px;
+        background-size: cover;
+      }
+
+      .nav_toggle {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .nav {
+
+    .nav_wrap {
+
+      .nav_menu {
+        
+        .nav_menu_ul {
+          padding: 22% 0 14%;
+          height: 80%;
+
+          li {
+            font-size: 28px;
+            width: 140px;
+            margin-top: 10%;
+          }
+        }
+
+        .nav_sns {
+          height: 18%;
+          margin: 0 auto;
+          position: relative;
+          border-right: 1px solid $white;
+
+          .nav_sns_ul {
+          width: 140px;
+          margin: 0px auto;
+          padding-top: 40px;
+          display: flex;
+          justify-content: center;
+            
+            li {
+              display: inline-block;
+              width: 32px;
+              height: 32px;
+              margin: 0 8px;
+              transition: .2s;
+            }
+
+            li:hover {
+              transform: translateY(-6px);
+            }
+
+            .twitter {
+              width: 34px;
+              height: 30px;
+              background-image: url(../img/twitter-w.svg);
+              background-size: cover;
+            }
+            
+            .inst {
+              background-image: url(../img/inst-w.png);
+              background-size: cover;
+            }
+            
+            .fb {
+              background-image: url(../img/fb-w.png);
+              background-size: cover;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -52,6 +52,12 @@ h2 {
   opacity: 0; /* 初めは見えないようにしておく */
 }
 
+.topAnime {
+  opacity: 0;
+  animation: topAnime 2s forwards;
+  overflow: hidden;
+}
+
 @keyframes fadeUpAnime {
   from {
     opacity: 0; /* 初めは見えないようにしておく */
@@ -85,5 +91,18 @@ h2 {
   to {
     opacity: 1; /* 可視化する */
     transform: translateX(0); /* 元の位置に戻す */
+  }
+}
+
+@keyframes topAnime {
+  0% {
+    opacity: 0;
+    background-position-x: 30%;
+    background-position-y: 30%;
+  }
+  100% {
+    background-position-x: 50%;
+    background-position-y: 50%;
+    opacity: 1;
   }
 }
